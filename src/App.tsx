@@ -8,6 +8,7 @@ import Badge from "@material-ui/core/Badge";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 
 import { Wrapper } from "./App.styles";
+import Item from "./Components/Item/item";
 
 export type CartItem = {
   id: number;
@@ -31,7 +32,7 @@ const App = () => {
 
   const getTotalItems = () => null;
 
-  const handleAddToCart = () => null;
+  const handleAddToCart = (clickedItem: CartItem) => null;
 
   const handleRemoveFromCart = () => null;
 
