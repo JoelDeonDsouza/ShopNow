@@ -40,9 +40,15 @@ const App = () => {
   if (error) return <div>Error</div>;
 
   return (
-    <div className="App">
-      <h1>Hello World</h1>
-    </div>
+    <Wrapper>
+      <Grid container spacing={3}>
+        {data?.map((item) => (
+          <Grid item key={item.id} xs={12} sm={4}>
+            <Item item={item} handleAddToCart={handleAddToCart} />
+          </Grid>
+        ))}
+      </Grid>
+    </Wrapper>
   );
 };
 

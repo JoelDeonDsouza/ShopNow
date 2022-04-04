@@ -7,7 +7,7 @@ type Props = {
   handleAddToCart: (clickedItem: CartItem) => void;
 };
 
-const Item: React.FC<Props> = ({ item, handleAddToCart }) => {
+const Item: React.FC<Props> = ({ item, handleAddToCart }) => (
   <Wrapper>
     <img src={item.image} alt={item.title} />
     <div>
@@ -16,7 +16,7 @@ const Item: React.FC<Props> = ({ item, handleAddToCart }) => {
       <h3>${item.price}</h3>
     </div>
     <Button onClick={() => handleAddToCart(item)}>Add</Button>
-  </Wrapper>;
-};
+  </Wrapper>
+);
 
 export default Item;
